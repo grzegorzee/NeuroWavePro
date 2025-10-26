@@ -1,0 +1,2179 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NeuroWave Pro - Personalizowana neuroakustyka dla przedsiębiorców. Zwiększ koncentrację o 47%, zaśnij w 14 minut, odzyskaj 5.7h produktywnego czasu tygodniowo. System EEG + AI backed by MIT.">
+    <meta name="keywords" content="urządzenie do zwiększenia koncentracji, technologia poprawy snu dla przedsiębiorców, neuroakustyka produktywność, EEG słuchawki, brain entrainment">
+    <title>NeuroWave Pro - Personalizowana Neuroakustyka dla Peak Performance | +47% Focus, ROI w 3 Tygodnie</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path fill='%2300D9FF' d='M20,50 Q30,30 40,50 T60,50 Q70,70 80,50' stroke='%230A1F44' stroke-width='3' fill='none'/><circle cx='50' cy='50' r='45' fill='none' stroke='%230A1F44' stroke-width='2'/></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ===== CSS VARIABLES ===== */
+        :root {
+            --color-primary: #0A1F44;
+            --color-secondary: #00D9FF;
+            --color-accent: #2E7D63;
+            --color-bg: #F8F9FA;
+            --color-dark: #1A1D23;
+            --color-white: #FFFFFF;
+            --color-gray-light: #E9ECEF;
+            --color-gray-medium: #6C757D;
+            
+            --font-primary: 'Inter', sans-serif;
+            --font-display: 'Space Grotesk', sans-serif;
+            
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 4rem;
+            --spacing-xl: 6rem;
+            
+            --transition: 0.3s ease-in-out;
+            --border-radius: 12px;
+            --border-radius-lg: 24px;
+        }
+        
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+        
+        body {
+            font-family: var(--font-primary);
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--color-dark);
+            background: var(--color-bg);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* ===== TYPOGRAPHY ===== */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-display);
+            line-height: 1.2;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            letter-spacing: -0.02em;
+        }
+        
+        h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            letter-spacing: -0.01em;
+        }
+        
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+        }
+        
+        h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: var(--spacing-sm);
+            color: var(--color-gray-medium);
+        }
+        
+        strong {
+            color: var(--color-primary);
+            font-weight: 600;
+        }
+        
+        /* ===== LAYOUT ===== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+        
+        section {
+            padding: var(--spacing-xl) 0;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* ===== HEADER & NAVIGATION ===== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(248, 249, 250, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--color-gray-light);
+            transition: all var(--transition);
+        }
+        
+        header.scrolled {
+            background: rgba(248, 249, 250, 0.98);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        header.transparent {
+            background: rgba(248, 249, 250, 0.7);
+            border-bottom: 1px solid rgba(233, 236, 239, 0.3);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--spacing-sm) var(--spacing-md);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            z-index: 1001;
+        }
+        
+        .logo-wave {
+            width: 32px;
+            height: 32px;
+        }
+        
+        /* Navigation Menu */
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--color-primary);
+            font-weight: 500;
+            font-size: 0.9375rem;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .nav-menu a:hover {
+            color: var(--color-secondary);
+        }
+        
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--color-secondary);
+            transition: width var(--transition);
+        }
+        
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+        
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 1001;
+        }
+        
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--color-primary);
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+        
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(7px, 7px);
+        }
+        
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+        
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            font-family: var(--font-primary);
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background: var(--color-secondary);
+            color: var(--color-primary);
+            box-shadow: 0 4px 20px rgba(0, 217, 255, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background: #00C1E8;
+            box-shadow: 0 6px 30px rgba(0, 217, 255, 0.5);
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-primary);
+            border: 2px solid var(--color-primary);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--color-primary);
+            color: var(--color-white);
+        }
+        
+        .btn-large {
+            padding: 1.25rem 3rem;
+            font-size: 1.125rem;
+        }
+        
+        .btn-small {
+            padding: 0.75rem 1.5rem;
+            font-size: 0.875rem;
+        }
+        
+        /* ===== HERO SECTION ===== */
+        #hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+            background: linear-gradient(135deg, var(--color-bg) 0%, #E3F2FD 100%);
+            position: relative;
+            overflow: hidden;
+            opacity: 1;
+            transform: none;
+        }
+        
+        #hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(0, 217, 255, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: pulse 8s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.3; }
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 700px;
+        }
+        
+        .hero-label {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--color-secondary);
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border-radius: 50px;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .hero-title {
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(1.125rem, 2vw, 1.5rem);
+            color: var(--color-gray-medium);
+            margin-bottom: var(--spacing-lg);
+            line-height: 1.6;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-md);
+            flex-wrap: wrap;
+        }
+        
+        .trust-elements {
+            display: flex;
+            gap: var(--spacing-md);
+            flex-wrap: wrap;
+            margin-top: var(--spacing-md);
+        }
+        
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--color-gray-medium);
+            font-size: 0.875rem;
+        }
+        
+        .trust-icon {
+            color: var(--color-accent);
+            font-size: 1.25rem;
+        }
+        
+        /* ===== STATS SECTION ===== */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+        }
+        
+        .stat-card {
+            background: var(--color-white);
+            padding: var(--spacing-md);
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stat-number {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--color-secondary);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--color-gray-medium);
+        }
+        
+        /* ===== PROBLEM SECTION ===== */
+        #problem {
+            background: var(--color-white);
+        }
+        
+        .problem-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .pain-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+        }
+        
+        .pain-card {
+            background: var(--color-bg);
+            padding: var(--spacing-md);
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--color-secondary);
+        }
+        
+        .pain-card h4 {
+            color: var(--color-primary);
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .pain-card p {
+            font-size: 0.9375rem;
+            margin-bottom: 0;
+        }
+        
+        /* ===== SOLUTION SECTION ===== */
+        #solution {
+            background: var(--color-primary);
+            color: var(--color-white);
+        }
+        
+        #solution h2,
+        #solution h3,
+        #solution p {
+            color: var(--color-white);
+        }
+        
+        .solution-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .solution-highlight {
+            font-size: 1.25rem;
+            font-weight: 500;
+            line-height: 1.6;
+            margin: var(--spacing-lg) 0;
+            padding: var(--spacing-md);
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--border-radius);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* ===== BENEFITS SECTION ===== */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-lg);
+        }
+        
+        .benefit-card {
+            background: var(--color-white);
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius-lg);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(0, 217, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .benefit-stats {
+            display: flex;
+            gap: var(--spacing-sm);
+            flex-wrap: wrap;
+            margin-top: var(--spacing-sm);
+        }
+        
+        .stat-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(46, 125, 99, 0.1);
+            color: var(--color-accent);
+            font-size: 0.875rem;
+            font-weight: 600;
+            border-radius: 50px;
+        }
+        
+        /* ===== FEATURES SECTION ===== */
+        #features {
+            background: var(--color-white);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-lg);
+        }
+        
+        .feature-card {
+            padding: var(--spacing-lg);
+            background: var(--color-bg);
+            border-radius: var(--border-radius-lg);
+            border: 2px solid transparent;
+            transition: var(--transition);
+        }
+        
+        .feature-card:hover {
+            border-color: var(--color-secondary);
+            background: var(--color-white);
+        }
+        
+        .feature-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: var(--color-secondary);
+            color: var(--color-primary);
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        /* ===== HOW IT WORKS SECTION ===== */
+        .steps-container {
+            max-width: 900px;
+            margin: var(--spacing-lg) auto 0;
+            position: relative;
+        }
+        
+        .steps-container::before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 40px;
+            bottom: 40px;
+            width: 2px;
+            background: var(--color-gray-light);
+        }
+        
+        .step-item {
+            display: flex;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .step-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .step-number {
+            flex-shrink: 0;
+            width: 60px;
+            height: 60px;
+            background: var(--color-secondary);
+            color: var(--color-primary);
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            position: relative;
+        }
+        
+        .step-content {
+            flex: 1;
+            padding-top: 0.5rem;
+        }
+        
+        .step-timeline {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: rgba(46, 125, 99, 0.1);
+            color: var(--color-accent);
+            font-size: 0.875rem;
+            font-weight: 600;
+            border-radius: 50px;
+            margin-top: var(--spacing-xs);
+        }
+        
+        /* ===== TESTIMONIALS SECTION ===== */
+        #testimonials {
+            background: var(--color-bg);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-lg);
+        }
+        
+        .testimonial-card {
+            background: var(--color-white);
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius-lg);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .stars {
+            color: #FFB800;
+            font-size: 1.25rem;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .testimonial-text {
+            flex: 1;
+            font-size: 0.9375rem;
+            line-height: 1.7;
+            color: var(--color-dark);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            padding-top: var(--spacing-sm);
+            border-top: 1px solid var(--color-gray-light);
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-white);
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+        
+        .author-info h4 {
+            margin-bottom: 0.25rem;
+            font-size: 1rem;
+        }
+        
+        .author-role {
+            font-size: 0.875rem;
+            color: var(--color-gray-medium);
+        }
+        
+        .testimonial-metrics {
+            display: flex;
+            gap: var(--spacing-sm);
+            flex-wrap: wrap;
+            margin-top: var(--spacing-sm);
+        }
+        
+        .metric-tag {
+            display: inline-block;
+            padding: 0.375rem 0.75rem;
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--color-secondary);
+            font-size: 0.75rem;
+            font-weight: 600;
+            border-radius: 50px;
+        }
+        
+        /* ===== SCIENCE SECTION ===== */
+        #science {
+            background: var(--color-white);
+        }
+        
+        .science-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .science-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto var(--spacing-lg);
+        }
+        
+        .science-steps {
+            background: var(--color-bg);
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius-lg);
+            margin: var(--spacing-lg) 0;
+        }
+        
+        .science-step {
+            display: flex;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-sm);
+            padding-bottom: var(--spacing-sm);
+            border-bottom: 1px solid var(--color-gray-light);
+        }
+        
+        .science-step:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .science-step-number {
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            background: var(--color-secondary);
+            color: var(--color-primary);
+            font-weight: 700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.875rem;
+        }
+        
+        .validation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+        }
+        
+        .validation-card {
+            padding: var(--spacing-md);
+            background: var(--color-bg);
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--color-accent);
+        }
+        
+        .validation-icon {
+            font-size: 2rem;
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        /* ===== PRICING SECTION ===== */
+        #pricing {
+            background: var(--color-bg);
+        }
+        
+        .pricing-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto var(--spacing-lg);
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--spacing-lg);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .pricing-card {
+            background: var(--color-white);
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius-lg);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+            position: relative;
+            transition: var(--transition);
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 50px rgba(0, 0, 0, 0.15);
+        }
+        
+        .pricing-card.popular {
+            border: 3px solid var(--color-secondary);
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: -15px;
+            right: 30px;
+            background: var(--color-secondary);
+            color: var(--color-primary);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .pricing-header {
+            text-align: center;
+            padding-bottom: var(--spacing-md);
+            border-bottom: 2px solid var(--color-gray-light);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .pricing-title {
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .pricing-price {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--color-secondary);
+            line-height: 1;
+        }
+        
+        .pricing-currency {
+            font-size: 1.5rem;
+        }
+        
+        .pricing-installment {
+            font-size: 0.875rem;
+            color: var(--color-gray-medium);
+            margin-top: var(--spacing-xs);
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin: var(--spacing-md) 0;
+        }
+        
+        .pricing-features li {
+            padding: 0.75rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-size: 0.9375rem;
+            border-bottom: 1px solid var(--color-gray-light);
+        }
+        
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .feature-check {
+            color: var(--color-accent);
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+        
+        .feature-cross {
+            color: var(--color-gray-medium);
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+        
+        .pricing-cta {
+            margin-top: var(--spacing-md);
+        }
+        
+        .guarantee-note {
+            text-align: center;
+            font-size: 0.875rem;
+            color: var(--color-gray-medium);
+            margin-top: var(--spacing-sm);
+        }
+        
+        /* ===== FAQ SECTION ===== */
+        #faq {
+            background: var(--color-white);
+        }
+        
+        .faq-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto var(--spacing-lg);
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: var(--color-bg);
+            border-radius: var(--border-radius);
+            margin-bottom: var(--spacing-sm);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        
+        .faq-question {
+            width: 100%;
+            padding: var(--spacing-md);
+            background: transparent;
+            border: none;
+            text-align: left;
+            font-family: var(--font-primary);
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+        
+        .faq-question:hover {
+            color: var(--color-secondary);
+        }
+        
+        .faq-icon {
+            font-size: 1.5rem;
+            color: var(--color-secondary);
+            transition: var(--transition);
+        }
+        
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .faq-answer-content {
+            padding: 0 var(--spacing-md) var(--spacing-md);
+            color: var(--color-gray-medium);
+            line-height: 1.7;
+        }
+        
+        /* ===== FINAL CTA SECTION ===== */
+        #final-cta {
+            background: linear-gradient(135deg, var(--color-primary) 0%, #0D2A5C 100%);
+            color: var(--color-white);
+            text-align: center;
+        }
+        
+        #final-cta h2,
+        #final-cta p {
+            color: var(--color-white);
+        }
+        
+        .final-cta-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .urgency-message {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--border-radius);
+            margin: var(--spacing-md) 0;
+            font-size: 1.125rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .final-cta-buttons {
+            display: flex;
+            gap: var(--spacing-sm);
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: var(--spacing-md);
+        }
+        
+        .btn-white {
+            background: var(--color-white);
+            color: var(--color-primary);
+        }
+        
+        .btn-white:hover {
+            background: var(--color-secondary);
+        }
+        
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--color-dark);
+            color: var(--color-gray-light);
+            padding: var(--spacing-lg) 0 var(--spacing-md);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .footer-section h4 {
+            color: var(--color-white);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-links a {
+            color: var(--color-gray-light);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--color-secondary);
+        }
+        
+        .footer-bottom {
+            padding-top: var(--spacing-md);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            font-size: 0.875rem;
+        }
+        
+        .certifications {
+            display: flex;
+            gap: var(--spacing-sm);
+            flex-wrap: wrap;
+            margin-top: var(--spacing-sm);
+        }
+        
+        .cert-badge {
+            display: inline-block;
+            padding: 0.375rem 0.75rem;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--color-white);
+            font-size: 0.75rem;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* ===== MOBILE RESPONSIVENESS ===== */
+        @media (max-width: 768px) {
+            :root {
+                --spacing-lg: 3rem;
+                --spacing-xl: 4rem;
+            }
+            
+            /* Mobile Menu */
+            .mobile-menu-toggle {
+                display: flex;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                height: 100vh;
+                width: 280px;
+                background: var(--color-white);
+                flex-direction: column;
+                padding: 6rem 2rem 2rem;
+                gap: 1.5rem;
+                box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+                transition: right 0.3s ease-in-out;
+                align-items: flex-start;
+            }
+            
+            .nav-menu.active {
+                right: 0;
+            }
+            
+            .nav-menu a {
+                font-size: 1.125rem;
+                width: 100%;
+                padding: 0.5rem 0;
+            }
+            
+            .nav-menu .btn {
+                width: 100%;
+                margin-top: 1rem;
+            }
+            
+            nav {
+                padding: 1rem var(--spacing-sm);
+            }
+            
+            .logo {
+                font-size: 1.25rem;
+            }
+            
+            .logo-wave {
+                width: 28px;
+                height: 28px;
+            }
+            
+            /* Hero Section */
+            #hero {
+                padding-top: 100px;
+                min-height: auto;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+            
+            /* Stats */
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--spacing-sm);
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+            
+            /* Grids */
+            .benefits-grid,
+            .features-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            /* Steps */
+            .steps-container::before {
+                left: 20px;
+            }
+            
+            .step-number {
+                width: 40px;
+                height: 40px;
+                font-size: 1.25rem;
+            }
+            
+            /* Final CTA */
+            .final-cta-buttons {
+                flex-direction: column;
+            }
+            
+            /* Typography */
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.75rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            /* Footer */
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-md);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .trust-elements {
+                flex-direction: column;
+                gap: var(--spacing-xs);
+            }
+            
+            .pricing-price {
+                font-size: 2.5rem;
+            }
+            
+            .btn-large {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+            
+            nav {
+                padding: 0.75rem var(--spacing-sm);
+            }
+            
+            .container {
+                padding: 0 var(--spacing-sm);
+            }
+        }
+        
+        /* ===== ACCESSIBILITY ===== */
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        *:focus-visible {
+            outline: 3px solid var(--color-secondary);
+            outline-offset: 2px;
+        }
+        
+        /* ===== LOADING STATE ===== */
+        .loading {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header role="banner">
+        <nav role="navigation" aria-label="Główna nawigacja">
+            <a href="#hero" class="logo" aria-label="NeuroWave Pro - Strona główna">
+                <svg class="logo-wave" viewBox="0 0 100 100" aria-hidden="true">
+                    <path fill="none" stroke="#00D9FF" stroke-width="4" d="M20,50 Q30,30 40,50 T60,50 Q70,70 80,50"/>
+                    <circle cx="50" cy="50" r="45" fill="none" stroke="#0A1F44" stroke-width="2"/>
+                </svg>
+                NeuroWave Pro
+            </a>
+            
+            <button class="mobile-menu-toggle" aria-label="Menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu">
+                <li><a href="#features">Funkcje</a></li>
+                <li><a href="#science">Nauka</a></li>
+                <li><a href="#testimonials">Opinie</a></li>
+                <li><a href="#pricing">Cennik</a></li>
+                <li><a href="#pricing" class="btn btn-primary btn-small">Rozpocznij Test</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-label">MIT Brain Lab Research • 12 Lat Badań</span>
+                <h1 class="hero-title">Twój mózg pracuje na 60% możliwości. <strong>Czas to zmienić.</strong></h1>
+                <p class="hero-subtitle">NeuroWave Pro wykorzystuje real-time EEG i AI do personalizacji neuroakustyki. Zwiększ koncentrację o <strong>47%</strong>, zaśnij w <strong>14 minut</strong>, odzyskaj <strong>5.7h produktywnego czasu tygodniowo</strong>. Backed by science, trusted by 13,429 CEO i przedsiębiorców.</p>
+                
+                <div class="hero-cta">
+                    <a href="#pricing" class="btn btn-primary btn-large">Rozpocznij 30-Dniowy Test</a>
+                    <a href="#science" class="btn btn-secondary btn-large">Zobacz Jak To Działa</a>
+                </div>
+                
+                <div class="trust-elements">
+                    <span class="trust-item">
+                        <span class="trust-icon" aria-hidden="true">✓</span>
+                        <span>60-dniowa gwarancja zwrotu</span>
+                    </span>
+                    <span class="trust-item">
+                        <span class="trust-icon" aria-hidden="true">✓</span>
+                        <span>89% kontynuuje po trial</span>
+                    </span>
+                    <span class="trust-item">
+                        <span class="trust-icon" aria-hidden="true">✓</span>
+                        <span>ROI w 3-4 tygodnie</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" data-count="13429">0</div>
+                    <div class="stat-label">Aktywnych użytkowników w 34 krajach</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-count="4.8">0</div>
+                    <div class="stat-label">Średnia ocena (2,847 reviews)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-count="89">0</div>
+                    <div class="stat-label">% użytkowników kontynuuje po trial</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-count="47">0</div>
+                    <div class="stat-label">Peer-reviewed publikacji</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problem">
+        <div class="container">
+            <div class="problem-content">
+                <h2>Znasz To Uczucie?</h2>
+                <p>60 godzin przy biurku tygodniowo, ale mózg pracuje tylko na pół gwizdka. 4-5 kaw dziennie żeby funkcjonować. Brain fog po południu. Zapadasz wieczorem, ale paradoksalnie nie możesz zasnąć. <strong>W środowisku gdzie konkurencja nie śpi, nie możesz sobie na to pozwolić.</strong></p>
+            </div>
+            
+            <div class="pain-points">
+                <div class="pain-card">
+                    <h4>Biznesowa Konsekwencja</h4>
+                    <p>Wolniejsze decyzje = utracone możliwości warte setki tysięcy PLN. 20-30% niższa efektywność to 200-400k PLN stracone rocznie w potencjalnym wzroście.</p>
+                </div>
+                <div class="pain-card">
+                    <h4>Zagrożenie Zdrowotne</h4>
+                    <p>Chroniczny brak regeneracji prowadzi do narastającego wypalenia, zaburzeń snu, ryzyka burnoutu. Twoje ciało wysyła sygnały - ignorujesz je.</p>
+                </div>
+                <div class="pain-card">
+                    <h4>Osobisty Koszt</h4>
+                    <p>Rozdrażnienie w relacjach. Brak energii na rodzinę i hobby. Poczucie marnowania potencjału. To nie jest życie jakie sobie wyobrażałeś.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solution">
+        <div class="container">
+            <div class="solution-content">
+                <h2>Jedyny System, Który Widzi Jak Reaguje Twój Mózg</h2>
+                <p>NeuroWave Pro to połączenie hardware (premium słuchawki z 8-kanałowym EEG + bone conduction) i AI-powered aplikacji. System w czasie rzeczywistym analizuje Twoje fale mózgowe i dostraja spersonalizowane frequencje dźwiękowe, żeby przeprowadzić Twój mózg do optymalnego stanu dla danego zadania.</p>
+                
+                <div class="solution-highlight">
+                    To nie są zwykłe słuchawki do medytacji. To personal brain trainer backed by 12 lat badań MIT Brain Lab i 47 peer-reviewed publikacji. Różnica między generic playlist a systemem który <strong>uczy się Twojego unikalnego mózgu.</strong>
+                </div>
+                
+                <h3>4 Modi Perfekcji</h3>
+                <div class="benefits-grid" style="margin-top: 2rem;">
+                    <div class="benefit-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+                        <h4 style="color: white;">FOCUS Mode</h4>
+                        <p style="color: rgba(255,255,255,0.8);">Beta waves 16-20Hz dla deep work, coding, pisania. Wchodzisz w głęboki focus w 7-9 minut.</p>
+                    </div>
+                    <div class="benefit-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+                        <h4 style="color: white;">FLOW Mode</h4>
+                        <p style="color: rgba(255,255,255,0.8);">Alpha-Theta 8-12Hz dla kreatywności, brainstorming, strategii. Stan elevated thinking.</p>
+                    </div>
+                    <div class="benefit-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+                        <h4 style="color: white;">RECHARGE Mode</h4>
+                        <p style="color: rgba(255,255,255,0.8);">Theta 4-8Hz. 20-min power nap = efekt 2h regular sleep. Gamechanger dla afternoon energy.</p>
+                    </div>
+                    <div class="benefit-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+                        <h4 style="color: white;">SLEEP Mode</h4>
+                        <p style="color: rgba(255,255,255,0.8);">Delta 0.5-4Hz indukuje deep sleep w 12-18 minut vs 45-60 normalnie. Oszczędność 2-3h nightly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: var(--spacing-lg);">Real-World Impact</h2>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Peak Productivity</h3>
+                    <p>Odzyskaj 5.7h produktywnego czasu tygodniowo. To 296h rocznie – 7 pełnych workweeks. Mean value: 148,000 PLN dodatkowej wartości biznesowej przy średniej stawce 500 PLN/h.</p>
+                    <div class="benefit-stats">
+                        <span class="stat-badge">+47% koncentracja</span>
+                        <span class="stat-badge">-34% błędy</span>
+                    </div>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🧠</div>
+                    <h3>Deep Sleep Quality</h3>
+                    <p>Deep sleep latency spada z 45 do 14 minut. REM cycles wzrastają o 38%. Budisz się regenerated, nie exhausted. Koniec z grogginess i wielo-alarmami.</p>
+                    <div class="benefit-stats">
+                        <span class="stat-badge">+2.3h deep sleep</span>
+                        <span class="stat-badge">+38% REM</span>
+                    </div>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Stress Management</h3>
+                    <p>Cortisol spadki o 27% po 4 tygodniach użytkowania. Heart rate variability up 41%. Lepsze decision-making under pressure, mniej emocjonalnego exhaustion.</p>
+                    <div class="benefit-stats">
+                        <span class="stat-badge">-27% cortisol</span>
+                        <span class="stat-badge">+41% HRV</span>
+                    </div>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚀</div>
+                    <h3>Fast ROI</h3>
+                    <p>Średni użytkownik reportuje pozytywny ROI w 3-4 tygodnie. Jedna dodatkowa zamknięta transakcja, jedna uniknięta costly mistake, jedna unlocked idea = wielokrotność inwestycji.</p>
+                    <div class="benefit-stats">
+                        <span class="stat-badge">ROI w 3 tyg</span>
+                        <span class="stat-badge">89% retention</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: var(--spacing-lg);">Techno-stack, Który Zmienia Grę</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-number">1</div>
+                    <h3>8-Channel EEG Monitoring</h3>
+                    <p>Medical-grade sensors embedded w comfortable premium headphones. Real-time brain wave tracking (delta, theta, alpha, beta, gamma). NIE potrzebujesz oddzielnego device – to all-in-one.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-number">2</div>
+                    <h3>Adaptive AI Engine</h3>
+                    <p>Algorytm uczy się Twojego unikalnego brain response profile. Co używasz więcej, tym lepiej system wie jak Twój mózg reaguje. Personal trainer dla brain, nie generic one-size-fits-all.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-number">3</div>
+                    <h3>Bone Conduction Tech</h3>
+                    <p>Możesz słuchać własnej muzyki, audiobooks, calls – NeuroWave layers na to neuroakustyczne frequencje przez bone conduction. Multitasking bez compromise na efektywność.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-number">4</div>
+                    <h3>Biofeedback Loop</h3>
+                    <p>System pokazuje live feedback jak Twój mózg reaguje na różne frequencje. Możesz real-time zobaczyć moment wejścia w flow state, deep focus, lub sleep mode. Data-driven optimization.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-number">5</div>
+                    <h3>Progress Analytics</h3>
+                    <p>Comprehensive dashboard pokazujący Twoje focus time, sleep quality, stress levels over time. Długoterminowe trendy widoczne. Correlation z Twoją produktywnością i wellbeing.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-number">6</div>
+                    <h3>Privacy First</h3>
+                    <p>Wszystkie dane procesowane locally on device lub encrypted w Twoim private cloud. Zero third-party access. GDPR compliant. Twoje brain data = Twoje własność.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 1rem;">Jak To Działa? Science w 4 Krokach</h2>
+            <p style="text-align: center; max-width: 600px; margin: 0 auto var(--spacing-lg); color: var(--color-gray-medium);">Od momentu włożenia słuchawek do peak performance – proces backed by neuroscience.</p>
+            
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Baseline Assessment</h3>
+                        <p>W pierwszych 3-5 sesji system mapuje Twój unikalny brain response profile. Analizuje jak Twój mózg naturalnie reaguje na różne frequencje. Building Twojego personalnego modelu.</p>
+                        <span class="step-timeline">Tydzień 1</span>
+                    </div>
+                </div>
+                
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Real-Time Entrainment</h3>
+                        <p>Podczas każdej sesji, EEG sensors śledzą live Twoje brain waves. AI dostosowuje frequencje sound w czasie rzeczywistym żeby "poprowadzić" Twój mózg do desired state (focus/flow/sleep). To nie jest static audio.</p>
+                        <span class="step-timeline">Każda sesja</span>
+                    </div>
+                </div>
+                
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Adaptive Learning</h3>
+                        <p>System continuously uczy się z każdej Twojej sesji. Odkrywa który patterns najlepiej działają dla Ciebie. Optymalizuje timing, intensywność, frequencje. Personalizacja deepens over time.</p>
+                        <span class="step-timeline">Tygodnie 2-4</span>
+                    </div>
+                </div>
+                
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Peak Performance</h3>
+                        <p>Po 6-8 tygodniach regularnego użytkowania system jest fully optimized dla Twojego brain. Wchodzisz w desired states faster i deeper. Long-term neuroplasticity effects zaczynają się manifestować.</p>
+                        <span class="step-timeline">Tygodnie 6-8</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Science Section -->
+    <section id="science">
+        <div class="container">
+            <div class="science-content">
+                <div class="science-intro">
+                    <h2>Research & Validation</h2>
+                    <p>NeuroWave Pro został rozwini­ęty przez neuroscientists z MIT Brain Lab w collaboration z researchers z Harvard Medical School. 12 lat badań, 47 peer-reviewed publikacji, 89 clinical trials.</p>
+                </div>
+                
+                <div class="science-steps">
+                    <h3 style="margin-bottom: var(--spacing-md);">Mechanizm Działania</h3>
+                    
+                    <div class="science-step">
+                        <div class="science-step-number">1</div>
+                        <div>
+                            <h4>Brainwave Entrainment</h4>
+                            <p>Mózg ma naturalną tendencję do synchronizacji z zewnętrznymi rhythmic stimuli. NeuroWave wykorzystuje binaural beats + isochronic tones w specific frequencies żeby indukować desired brain states.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="science-step">
+                        <div class="science-step-number">2</div>
+                        <div>
+                            <h4>Adaptive Feedback</h4>
+                            <p>Tradycyjne entrainment apps wysyłają static frequencies. NeuroWave w czasie rzeczywistym dostosowuje się bazując na live EEG readings. Jeśli Twój mózg nie reaguje – system adjusts. To closed-loop system.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="science-step">
+                        <div class="science-step-number">3</div>
+                        <div>
+                            <h4>Neuroplasticity</h4>
+                            <p>Regular użytkowanie (4+ sessions tygodniowo przez 8+ weeks) prowadzi do long-term changes w brain. Improved connectivity między prefrontal cortex a innymi brain regions. Sustainable results, nie tylko temporary.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="science-step">
+                        <div class="science-step-number">4</div>
+                        <div>
+                            <h4>Validation</h4>
+                            <p>Wszystkie claims backed by data. Double-blind RCT studies z n=847 participants. Published w Journal of Neuroscience, Sleep Research, Cognitive Enhancement Review. FDA Class II cleared.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 style="margin-top: var(--spacing-lg); margin-bottom: var(--spacing-md); text-align: center;">Certifications & Validations</h3>
+                <div class="validation-grid">
+                    <div class="validation-card">
+                        <div class="validation-icon">🎓</div>
+                        <h4>MIT Brain Lab</h4>
+                        <p>Co-developed by MIT neuroscientists. 12 lat research collaboration.</p>
+                    </div>
+                    <div class="validation-card">
+                        <div class="validation-icon">🏥</div>
+                        <h4>FDA Class II</h4>
+                        <p>Medical device clearance dla wellness use. Rigorous safety & efficacy testing.</p>
+                    </div>
+                    <div class="validation-card">
+                        <div class="validation-icon">📊</div>
+                        <h4>47 Publications</h4>
+                        <p>Peer-reviewed research w top-tier neuroscience journals.</p>
+                    </div>
+                    <div class="validation-card">
+                        <div class="validation-icon">✅</div>
+                        <h4>CE & ISO 13485</h4>
+                        <p>European certification + medical device quality management.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 1rem;">Co Mówią Użytkownicy?</h2>
+            <p style="text-align: center; max-width: 600px; margin: 0 auto var(--spacing-lg); color: var(--color-gray-medium);">Real entrepreneurs, real results. 13,429 aktywnych użytkowników, 89% retention rate po trial.</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Pierwsze 2 tygodnie byłem skeptyczny. Ale po miesiącu – game changer. Mój午 afternoon slump zniknął. Meetings po lunch są teraz mój peak performance time. To nie jest placebo – moja team zauważyła różnicę zanim im powiedziałem."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MK</div>
+                        <div class="author-info">
+                            <h4>Marek Kowalski</h4>
+                            <p class="author-role">CEO, SaaS Startup (Series A)</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-metrics">
+                        <span class="metric-tag">+52% focus</span>
+                        <span class="metric-tag">-3.2h sleep latency</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Jestem inwestor VC. Mój job to robić 20-30 critical decisions dziennie. Cognitive fatigue była mój biggest enemy. NeuroWave dało mi back consistent mental clarity przez cały dzień. Worth every złoty."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AN</div>
+                        <div class="author-info">
+                            <h4>Anna Nowak</h4>
+                            <p class="author-role">Partner, VC Fund</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-metrics">
+                        <span class="metric-tag">Better decisions</span>
+                        <span class="metric-tag">ROI < 2 weeks</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Byłem chronically undersleeping przez lata. 4-5h nightly był mój norm. NeuroWave's sleep mode jest incredible. Zaśypiam w 15 minut vs 60+ wcześniej. Deep sleep quality up dramatically. Energy levels przez dzień – completely different."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">PT</div>
+                        <div class="author-info">
+                            <h4>Piotr Tomaszewski</h4>
+                            <p class="author-role">Founder, E-commerce (8-figure)</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-metrics">
+                        <span class="metric-tag">+2.8h deep sleep</span>
+                        <span class="metric-tag">Sleep in 15min</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Jako developer working on complex systems, deep focus jest critical. Context switching kills productivity. Focus mode daje mi 2-3h deep work blocks gdzie czuję się jak w flow. Code quality wzrosła, bugs spadły. Mój team jest impressed."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JW</div>
+                        <div class="author-info">
+                            <h4>Jakub Wiśniewski</h4>
+                            <p class="author-role">CTO, FinTech Startup</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-metrics">
+                        <span class="metric-tag">3h focus blocks</span>
+                        <span class="metric-tag">-40% bugs</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Jestem busy mom + entrepreneur. Stress levels były through the roof. NeuroWave's recharge mode jest lifesaver. 20-min power nap feels like 2h regular sleep. Afternoon energy surge pozwala mi być present dla family po work. Quality of life improvement."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">KL</div>
+                        <div class="author-info">
+                            <h4>Katarzyna Lewandowska</h4>
+                            <p class="author-role">Founder, Marketing Agency</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-metrics">
+                        <span class="metric-tag">20min = 2h rest</span>
+                        <span class="metric-tag">-35% stress</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Skeptical at first, ale data don't lie. Mój Oura Ring confirms – HRV up 38%, sleep quality dramatically improved. Business metrics też up – closed 3 dodatkowe deals last month. When your brain works better, everything else follows."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MW</div>
+                        <div class="author-info">
+                            <h4>Michał Wójcik</h4>
+                            <p class="author-role">Serial Entrepreneur, Investor</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-metrics">
+                        <span class="metric-tag">+38% HRV</span>
+                        <span class="metric-tag">More deals closed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing">
+        <div class="container">
+            <div class="pricing-intro">
+                <h2>Investment That Pays For Itself</h2>
+                <p>Każdy dzień cognitive sub-optimization kosztuje Cię opportunities. Mean entrepreneur traci 200-400k PLN rocznie przez inefficient brain performance. NeuroWave = najszybszy ROI w Twoim career.</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Starter Pack</h3>
+                        <div class="pricing-price">
+                            <span class="pricing-currency">PLN</span> 2,997
+                        </div>
+                        <p class="pricing-installment">lub 3x 999 PLN (0% interest)</p>
+                    </div>
+                    
+                    <ul class="pricing-features">
+                        <li>
+                            <span class="feature-check">✓</span>
+                            <span>NeuroWave Pro Headphones (8-channel EEG)</span>
+                        </li>
+                        <li>
+                            <span class="feature-check">✓</span>
+                            <span>AI-powered Mobile App (iOS + Android)</span>
+                        </li>
+                        <li>
+                            <span class="feature-check">✓</span>
+                            <span>4 Modi (Focus, Flow, Recharge, Sleep)</span>
+                        </li>
+                        <li>
+                            <span class="feature-check">✓</span>
+                            <span>Progress Analytics Dashboard</span>
+                        </li>
+                        <li>
+                            <span class="feature-check">✓</span>
+                            <span>60-day money-back guarantee</span>
+                        </li>
+                        <li>
+                            <span class="feature-cross">✗</span>
+                            <span>1-on-1 Onboarding Session</span>
+                        </li>
+                        <li>
+                            <span class="feature-cross">✗</span>
+                            <span>Priority Support</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="pricing-cta">
+                        <a href="#" class="btn btn-secondary" style="width: 100%;">Rozpocznij 60-Day Trial</a>
+                    </div>
+                    <p class="guarantee-note">Free shipping • 24h dispatch • 2-year warranty</p>
+                </div>
+                
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Pro Pack</h3>
+                        <div class="pricing-price">
+                            <span class="pricing-currency">PLN</span> 3,997
+                        </div>
+                        <p class="pricing-installment">lub 4x 999 PLN (0% interest)</p>
+                    </div>
+                    
+                    <ul class="pricing-features">
+                        <li>
+                            <span class="feature-check">✓</span>
+                            <span>Wszystko z Starter Pack</span>
+                        </li>
+                        <li>
+                            <span class="feature-check">✓</span>
+                            <span>1-on-1 Virtual Onboarding (45min)</span>
+                        </li>
+                        <li>
+                            <span class="feature-check">✓</span>
+                            <span>Priority Email Support (24h response)</span>
+                        </li>
+                        <li>
+                            <span class="feature-check">✓</span>
+                            <span>Quarterly Optimization Check-ins</span>
+                        </li>
+                        <li>
+                            <span class="feature-check">✓</span>
+                            <span>Advanced Analytics (HRV, Stress tracking)</span>
+                        </li>
+                        <li>
+                            <span class="feature-check">✓</span>
+                            <span>Premium Carrying Case + Accessories</span>
+                        </li>
+                        <li>
+                            <span class="feature-check">✓</span>
+                            <span>Extended 3-year warranty</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="pricing-cta">
+                        <a href="#" class="btn btn-primary" style="width: 100%;">Rozpocznij 60-Day Trial</a>
+                    </div>
+                    <p class="guarantee-note">Free shipping • 24h dispatch • +20% productivity guarantee</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: var(--spacing-lg); padding: var(--spacing-md); background: var(--color-white); border-radius: var(--border-radius); max-width: 700px; margin-left: auto; margin-right: auto;">
+                <h4 style="margin-bottom: var(--spacing-sm);">🎁 Limited Time Bonus</h4>
+                <p>Zamów w tym tygodniu = dodatkowy 3-month subscription do NeuroWave Premium Community (value 597 PLN). Exclusive webinars z neuroscientists, peer accountability groups, advanced protocols.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+        <div class="container">
+            <div class="faq-intro">
+                <h2>Często Zadawane Pytania</h2>
+                <p>Masz pytania? Mamy odpowiedzi. Jeśli nie znajdziesz tego czego szukasz, napisz do nas.</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Czy to naprawdę działa, czy to placebo?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>NeuroWave Pro został validated through multiple double-blind RCT studies z łącznie n=847 participants. Improvements w focus, sleep quality, i stress reduction są statistically significant (p<0.001) vs placebo control group. To nie jest placebo – to measurable brainwave entrainment backed by neuroscience.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Jak szybko zobaczę results?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Większość użytkowników reportuje immediate effects – lepszy focus lub easier falling asleep już w pierwszych 2-3 sesjach. Pełna optimization następuje po 6-8 tygodniach regularnego użytkowania (4+ sessions weekly), kiedy system fully nauczy się Twojego brain profile i nastąpią długoterminowe neuroplasticity changes.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Czy muszę nosić słuchawki cały czas?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Nie. Recommended usage: 20-40 minut dziennie w zależności od mode. Focus/Flow sessions zwykle 30-40 min. Recharge 20 min. Sleep mode używasz przy falling asleep (może być shorter jeśli zaśniesz szybciej). To nie jest device który nosisz 24/7 – to targeted brain training sessions.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Co jeśli nie będzie działać dla mnie?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Masz 60-day money-back guarantee, no questions asked. Jeśli po 8 tygodniach regularnego użytkowania (minimum 4 sessions weekly) nie zobaczysz measurable improvement w focus, sleep, lub stress levels – zwracasz device i otrzymujesz full refund. 89% użytkowników kontynuuje po trial period.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Czy jest to bezpieczne? Czy są side effects?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>NeuroWave Pro jest FDA Class II cleared medical device. EEG monitoring jest completely non-invasive (tylko czyta brain waves, nie wysyła electrical signals). Brainwave entrainment through sound jest used przez decades w clinical settings. Zero reported long-term side effects. Niektórzy users reportują mild headache w pierwszych 1-2 sessions podczas adaptation period.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Czy mogę używać z moją własną muzyką?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Tak! Bone conduction technology pozwala na layering neuroakustycznych frequencies na top of Twojej własnej muzyki, podcasts, lub audiobooks. Słuchasz content który lubisz + jednocześnie otrzymujesz brain entrainment benefits. Możesz też używać w silence mode jeśli preferujesz tylko entrainment sounds.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Jak wygląda privacy z moimi brain data?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Wszystkie EEG data są processed locally on device lub stored encrypted w Twoim private cloud. Zero third-party access. Zero sprzedawania data. GDPR compliant. Możesz w każdym momencie delete wszystkie Twoje dane. Twoje brain data = Twoja własność, period.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Jaka jest różnica vs generic meditation apps?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Generic apps = static audio tracks, one-size-fits-all, zero feedback loop. NeuroWave = real-time EEG monitoring + adaptive AI adjustment + personalized optimization. To różnica między guessing a measuring. Between hoping a knowing. Between generic solution a system który uczy się Twojego unique brain.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section id="final-cta">
+        <div class="container">
+            <div class="final-cta-content">
+                <h2>Peak Performance Nie Jest Luxury. To Necessity.</h2>
+                <p>Każdy dzień bez optimizacji to dzień straconych możliwości. 296 godzin produktywnego czasu rocznie. 148,000 PLN dodatkowej wartości. Lepsze decyzje. Więcej energii. Spokojniejszy sen.</p>
+                
+                <div class="urgency-message">
+                    <strong>Start teraz = Peak performance za 6-8 tygodni</strong><br>
+                    Czyli tuż przed Q1 peak season. Perfect timing.
+                </div>
+                
+                <div class="final-cta-buttons">
+                    <a href="#pricing" class="btn btn-white btn-large">Rozpocznij 60-Dniowy Test</a>
+                    <a href="#science" class="btn btn-secondary btn-large" style="border-color: white; color: white;">Zobacz Research</a>
+                </div>
+                
+                <p style="margin-top: 2rem; font-size: 0.875rem; opacity: 0.8;">✓ 60-day money back • ✓ Zero risk • ✓ +20% productivity guarantee • ✓ 89% kontynuuje po trial</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>NeuroWave Pro</h4>
+                    <p>Personalized neuroakustyka dla peak performance. Backed by MIT Brain Lab research.</p>
+                    <div class="certifications">
+                        <span class="cert-badge">FDA Class II</span>
+                        <span class="cert-badge">CE Certified</span>
+                        <span class="cert-badge">ISO 13485</span>
+                        <span class="cert-badge">GDPR Compliant</span>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Produkty</h4>
+                    <ul class="footer-links">
+                        <li><a href="#features">Funkcje</a></li>
+                        <li><a href="#science">Research & Nauka</a></li>
+                        <li><a href="#pricing">Cennik</a></li>
+                        <li><a href="#testimonials">Testimoniale</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Firma</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">O Nas</a></li>
+                        <li><a href="#team">Zespół</a></li>
+                        <li><a href="#careers">Kariera</a></li>
+                        <li><a href="#press">Media</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Wsparcie</h4>
+                    <ul class="footer-links">
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
+                        <li><a href="#shipping">Dostawa</a></li>
+                        <li><a href="#returns">Zwroty</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                        <li><a href="#cookies">Cookie Policy</a></li>
+                        <li><a href="#warranty">Gwarancja</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 NeuroWave Pro. All rights reserved. Designed for ambitious entrepreneurs who demand peak performance.</p>
+                <p style="margin-top: 0.5rem; font-size: 0.75rem; opacity: 0.7;">Brief przykładowy - testimoniale i statystyki są illustracyjne w celach edukacyjnych.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // ===== MOBILE MENU TOGGLE =====
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            mobileMenuToggle.setAttribute('aria-expanded', 
+                mobileMenuToggle.classList.contains('active'));
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // ===== HEADER SCROLL EFFECT =====
+        let lastScroll = 0;
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > 100) {
+                header.classList.add('scrolled');
+                header.classList.remove('transparent');
+            } else if (currentScroll > 10) {
+                header.classList.add('transparent');
+                header.classList.remove('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+                header.classList.remove('transparent');
+            }
+
+            lastScroll = currentScroll;
+        });
+
+        // ===== INTERSECTION OBSERVER FOR SCROLL ANIMATIONS =====
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections except hero
+        document.querySelectorAll('section:not(#hero)').forEach(section => {
+            observer.observe(section);
+        });
+
+        // ===== STATS COUNTER ANIMATION =====
+        function animateCounter(element) {
+            const target = parseFloat(element.getAttribute('data-count'));
+            const duration = 2000;
+            const steps = 60;
+            const increment = target / steps;
+            const stepDuration = duration / steps;
+            let current = 0;
+
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                
+                // Format number
+                if (target > 1000) {
+                    element.textContent = Math.floor(current).toLocaleString('pl-PL');
+                } else if (target < 10) {
+                    element.textContent = current.toFixed(1);
+                } else {
+                    element.textContent = Math.floor(current);
+                }
+            }, stepDuration);
+        }
+
+        // Trigger counter animation when stats section is visible
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.querySelectorAll('.stat-number').forEach(animateCounter);
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const statsSection = document.querySelector('#stats');
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+
+        // ===== SMOOTH SCROLL =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // ===== FAQ ACCORDION =====
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', function() {
+                const faqItem = this.parentElement;
+                const answer = faqItem.querySelector('.faq-answer');
+                const isActive = faqItem.classList.contains('active');
+
+                // Close all other FAQs
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-answer').style.maxHeight = null;
+                    item.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                });
+
+                // Toggle current FAQ
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    this.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+
+        // ===== CTA TRACKING (placeholder - integrate with analytics) =====
+        document.querySelectorAll('.btn-primary').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                // Add analytics tracking here
+                console.log('CTA clicked:', this.textContent);
+            });
+        });
+
+        // ===== LAZY LOADING OPTIMIZATION =====
+        if ('loading' in HTMLImageElement.prototype) {
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            images.forEach(img => {
+                img.src = img.dataset.src;
+            });
+        }
+    </script>
+</body>
+</html>
